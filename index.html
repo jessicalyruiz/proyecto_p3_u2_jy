@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-   
-</script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
 </head>
 <body>
     <header>
@@ -14,15 +14,25 @@
     </header>
     <nav></nav>
     <section>
+        <h1>Inicio</h1>
+        <p>{{6+4}}</p> 
+        <p>{{true}}</p>
+               <p>{{true?'Activo':'Inactivo'}}</p>
+           
         <h1> Mi primer pryecto en Vue</h1>
             <div id="myApp">
 
-                {{6+4}}
+               <p>{{6+4}}</p> 
+               <p>{{true}}</p>
+               <p>{{true?'Activo':'Inactivo'}}</p>
+               <h6>{{mensaje}}</h6>
+               <label for="">{{apellido}}</label>
+               <button v-onclick="cambiarNombre">Cambiar nomre</button>
+               <button v-onclick="cambiarApellido">Cambiar apellido</button>
             </div>
-           
+           <h1>Fin</h1>
     </section>
     <footer></footer>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="js/configuracion.js"></script>
+        <script src="js/configuracion.js"></script>
 </body>
 </html>
