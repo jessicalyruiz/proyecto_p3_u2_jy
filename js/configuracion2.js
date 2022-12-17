@@ -14,17 +14,30 @@ const app = Vue.createApp({
     data() {
         //sirve para declarar propiedades reactivas
         return{
-        arreglo:frases
+        arreglo:frases,
+        fraseNueva:null
         }
     },
     methods: {
-        cambiarNombre(event) {
-            console.log(event)
-            this.nombre = 'pedro'
+        agregarFrase(charCode) {
+            console.log('mensaje Desestructurado')
+            console.log(charCode)
+            if(charCode!=13)return
+            const fraseObjetoNueva={
+                texto: this.fraseNueva,
+                autor: 'jessi'
+            }
+            this.arreglo.unshift(fraseObjetoNueva)
         },
-        cambiarApellido(event) {
-            console.log(event)
-            this.apellido = 'lin'
+        agregarFraseModificador(event) {
+            console.log('mensaje')
+            console.log(event.charCode)
+            
+            const fraseObjetoNueva={
+                texto: this.fraseNueva
+                //autor: 'jessi'
+            }
+            this.arreglo.unshift(fraseObjetoNueva)
         }
     }
 })
