@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <nav></nav>
+    <section>
+        <div id="myApp3">
+            <h1>Ingresar Estudiantes</h1>
+            <label>Nombre: {{estudianteNombre}}</label>
+            <br>
+            <input type="text" v-model="estudianteNombre">
+            <br>
+            <label>Apellido: {{estudianteApellido}}</label>
+            <br>
+            <input type="text" v-model="estudianteApellido" >
+            <br>
+            <label>Dirección: {{estudianteDireccion}}</label>
+            <br>
+            <input type="text" v-model="estudianteDireccion" >
+            <br>
+            <button v-on:click="agregarEstudianteModificador">Agregar</button>
+            <h2>Estudiantes ingresados:</h2>
+            <ul>
+                <li v-for="({nombre,apellido,direccion},  index) in arreglo">
+                    <span>Estudiante: {{index+1}}.- Nombre:{{nombre}}   -   Apellido: {{apellido}}    -    Dirección: {{direccion}}</span>
+                    <!--<blockquote v-if="autor!== undefined">Autor: {{autor}}</blockquote>-->
+                   <!-- <blockquote v-show="autor!== undefined">Autor: {{autor}}</blockquote>-->
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer></footer>
+    <script src="../js/confiestudiantes.js"></script>
+
+</body>
+
+</html>

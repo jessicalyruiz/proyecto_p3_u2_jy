@@ -34,7 +34,7 @@ const app = Vue.createApp({
             console.log(event.charCode)
             
             const fraseObjetoNueva={
-                texto: this.fraseNueva
+                frase: this.fraseNueva
                 //autor: 'jessi'
             }
             this.arreglo.unshift(fraseObjetoNueva)
